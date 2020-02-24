@@ -1,11 +1,13 @@
 .container {
+  width: 100%;
+}
+.clock {
+  margin: auto;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-.clock {
-  margin: auto;
+  width: 36rem;
   .separator {
     float: left;
     width: 3rem;
