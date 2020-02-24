@@ -1,0 +1,342 @@
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.clock {
+  margin: auto; }
+  .clock .separator {
+    float: left;
+    width: 3rem;
+    height: 7rem;
+    position: relative; }
+    .clock .separator::before, .clock .separator::after {
+      position: absolute;
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: black;
+      animation: blink 1s infinite steps(2); }
+    .clock .separator::after {
+      top: 33%; }
+    .clock .separator::before {
+      top: 66%; }
+
+@keyframes blink {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.digit {
+  width: 5rem;
+  float: left; }
+  .digit .ticker {
+    float: left;
+    width: 1rem;
+    height: 1rem;
+    border: 0.07142857142rem solid #eaeaea;
+    border-radius: 50%;
+    position: relative; }
+    .digit .ticker .tic {
+      transition: transform 500ms linear;
+      width: 1rem;
+      height: 1rem;
+      position: absolute; }
+      .digit .ticker .tic::before {
+        position: absolute;
+        background: #aaa;
+        content: " ";
+        left: .5rem;
+        top: .45rem;
+        width: 0.5rem;
+        height: 0.1rem; }
+
+[data-digit="0"] .ticker:nth-child(1) .tic.t1, [data-digit="0"] .ticker:nth-child(6) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="0"] .ticker:nth-child(2) .tic.t1, [data-digit="0"] .ticker:nth-child(3) .tic.t1, [data-digit="0"] .ticker:nth-child(22) .tic.t1, [data-digit="0"] .ticker:nth-child(23) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="0"] .ticker:nth-child(4) .tic.t1, [data-digit="0"] .ticker:nth-child(7) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="0"] .ticker:nth-child(4) .tic.t2, [data-digit="0"] .ticker:nth-child(7) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="0"] .ticker:nth-child(5) .tic.t1, [data-digit="0"] .ticker:nth-child(8) .tic.t1, [data-digit="0"] .ticker:nth-child(9) .tic.t1, [data-digit="0"] .ticker:nth-child(12) .tic.t1, [data-digit="0"] .ticker:nth-child(13) .tic.t1, [data-digit="0"] .ticker:nth-child(16) .tic.t1, [data-digit="0"] .ticker:nth-child(17) .tic.t1, [data-digit="0"] .ticker:nth-child(20) .tic.t1, [data-digit="0"] .ticker:nth-child(10) .tic.t1, [data-digit="0"] .ticker:nth-child(11) .tic.t1, [data-digit="0"] .ticker:nth-child(14) .tic.t1, [data-digit="0"] .ticker:nth-child(15) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="0"] .ticker:nth-child(5) .tic.t2, [data-digit="0"] .ticker:nth-child(8) .tic.t2, [data-digit="0"] .ticker:nth-child(9) .tic.t2, [data-digit="0"] .ticker:nth-child(12) .tic.t2, [data-digit="0"] .ticker:nth-child(13) .tic.t2, [data-digit="0"] .ticker:nth-child(16) .tic.t2, [data-digit="0"] .ticker:nth-child(17) .tic.t2, [data-digit="0"] .ticker:nth-child(20) .tic.t2, [data-digit="0"] .ticker:nth-child(10) .tic.t2, [data-digit="0"] .ticker:nth-child(11) .tic.t2, [data-digit="0"] .ticker:nth-child(14) .tic.t2, [data-digit="0"] .ticker:nth-child(15) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="0"] .ticker:nth-child(21) .tic.t1, [data-digit="0"] .ticker:nth-child(18) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="0"] .ticker:nth-child(24) .tic.t1, [data-digit="0"] .ticker:nth-child(19) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="0"] .ticker:nth-child(24) .tic.t2, [data-digit="0"] .ticker:nth-child(19) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="1"] .ticker:nth-child(4) .tic.t1, [data-digit="1"] .ticker:nth-child(4) .tic.t2, [data-digit="1"] .ticker:nth-child(8) .tic.t1, [data-digit="1"] .ticker:nth-child(8) .tic.t2, [data-digit="1"] .ticker:nth-child(9) .tic.t1, [data-digit="1"] .ticker:nth-child(9) .tic.t2, [data-digit="1"] .ticker:nth-child(12) .tic.t1, [data-digit="1"] .ticker:nth-child(12) .tic.t2, [data-digit="1"] .ticker:nth-child(13) .tic.t1, [data-digit="1"] .ticker:nth-child(13) .tic.t2, [data-digit="1"] .ticker:nth-child(16) .tic.t1, [data-digit="1"] .ticker:nth-child(16) .tic.t2 {
+  transform: rotate(135deg); }
+
+[data-digit="1"] .ticker:nth-child(1) .tic.t1, [data-digit="1"] .ticker:nth-child(17) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="1"] .ticker:nth-child(6) .tic.t1, [data-digit="1"] .ticker:nth-child(3) .tic.t1, [data-digit="1"] .ticker:nth-child(20) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="1"] .ticker:nth-child(6) .tic.t2, [data-digit="1"] .ticker:nth-child(3) .tic.t2, [data-digit="1"] .ticker:nth-child(20) .tic.t2 {
+  transform: rotate(180deg); }
+
+[data-digit="1"] .ticker:nth-child(2) .tic.t1, [data-digit="1"] .ticker:nth-child(22) .tic.t1, [data-digit="1"] .ticker:nth-child(23) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="1"] .ticker:nth-child(7) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="1"] .ticker:nth-child(7) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="1"] .ticker:nth-child(10) .tic.t1, [data-digit="1"] .ticker:nth-child(11) .tic.t1, [data-digit="1"] .ticker:nth-child(14) .tic.t1, [data-digit="1"] .ticker:nth-child(15) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="1"] .ticker:nth-child(10) .tic.t2, [data-digit="1"] .ticker:nth-child(11) .tic.t2, [data-digit="1"] .ticker:nth-child(14) .tic.t2, [data-digit="1"] .ticker:nth-child(15) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="1"] .ticker:nth-child(21) .tic.t1, [data-digit="1"] .ticker:nth-child(5) .tic.t1, [data-digit="1"] .ticker:nth-child(19) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="1"] .ticker:nth-child(24) .tic.t1, [data-digit="1"] .ticker:nth-child(18) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="1"] .ticker:nth-child(24) .tic.t2, [data-digit="1"] .ticker:nth-child(18) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="2"] .ticker:nth-child(1) .tic.t1, [data-digit="2"] .ticker:nth-child(9) .tic.t1, [data-digit="2"] .ticker:nth-child(14) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="2"] .ticker:nth-child(2) .tic.t1, [data-digit="2"] .ticker:nth-child(3) .tic.t1, [data-digit="2"] .ticker:nth-child(22) .tic.t1, [data-digit="2"] .ticker:nth-child(23) .tic.t1, [data-digit="2"] .ticker:nth-child(6) .tic.t1, [data-digit="2"] .ticker:nth-child(10) .tic.t1, [data-digit="2"] .ticker:nth-child(15) .tic.t1, [data-digit="2"] .ticker:nth-child(19) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="2"] .ticker:nth-child(4) .tic.t1, [data-digit="2"] .ticker:nth-child(7) .tic.t1, [data-digit="2"] .ticker:nth-child(20) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="2"] .ticker:nth-child(4) .tic.t2, [data-digit="2"] .ticker:nth-child(7) .tic.t2, [data-digit="2"] .ticker:nth-child(20) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="2"] .ticker:nth-child(8) .tic.t1, [data-digit="2"] .ticker:nth-child(12) .tic.t1, [data-digit="2"] .ticker:nth-child(13) .tic.t1, [data-digit="2"] .ticker:nth-child(17) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="2"] .ticker:nth-child(8) .tic.t2, [data-digit="2"] .ticker:nth-child(12) .tic.t2, [data-digit="2"] .ticker:nth-child(13) .tic.t2, [data-digit="2"] .ticker:nth-child(17) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="2"] .ticker:nth-child(21) .tic.t1, [data-digit="2"] .ticker:nth-child(18) .tic.t1, [data-digit="2"] .ticker:nth-child(5) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="2"] .ticker:nth-child(24) .tic.t1, [data-digit="2"] .ticker:nth-child(11) .tic.t1, [data-digit="2"] .ticker:nth-child(16) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="2"] .ticker:nth-child(24) .tic.t2, [data-digit="2"] .ticker:nth-child(11) .tic.t2, [data-digit="2"] .ticker:nth-child(16) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="3"] .ticker:nth-child(1) .tic.t1, [data-digit="3"] .ticker:nth-child(17) .tic.t1, [data-digit="3"] .ticker:nth-child(9) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="3"] .ticker:nth-child(2) .tic.t1, [data-digit="3"] .ticker:nth-child(3) .tic.t1, [data-digit="3"] .ticker:nth-child(6) .tic.t1, [data-digit="3"] .ticker:nth-child(10) .tic.t1, [data-digit="3"] .ticker:nth-child(14) .tic.t1, [data-digit="3"] .ticker:nth-child(18) .tic.t1, [data-digit="3"] .ticker:nth-child(22) .tic.t1, [data-digit="3"] .ticker:nth-child(23) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="3"] .ticker:nth-child(4) .tic.t1, [data-digit="3"] .ticker:nth-child(7) .tic.t1, [data-digit="3"] .ticker:nth-child(15) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="3"] .ticker:nth-child(4) .tic.t2, [data-digit="3"] .ticker:nth-child(7) .tic.t2, [data-digit="3"] .ticker:nth-child(15) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="3"] .ticker:nth-child(8) .tic.t1, [data-digit="3"] .ticker:nth-child(12) .tic.t1, [data-digit="3"] .ticker:nth-child(16) .tic.t1, [data-digit="3"] .ticker:nth-child(20) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="3"] .ticker:nth-child(8) .tic.t2, [data-digit="3"] .ticker:nth-child(12) .tic.t2, [data-digit="3"] .ticker:nth-child(16) .tic.t2, [data-digit="3"] .ticker:nth-child(20) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="3"] .ticker:nth-child(5) .tic.t1, [data-digit="3"] .ticker:nth-child(21) .tic.t1, [data-digit="3"] .ticker:nth-child(13) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="3"] .ticker:nth-child(24) .tic.t1, [data-digit="3"] .ticker:nth-child(19) .tic.t1, [data-digit="3"] .ticker:nth-child(11) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="3"] .ticker:nth-child(24) .tic.t2, [data-digit="3"] .ticker:nth-child(19) .tic.t2, [data-digit="3"] .ticker:nth-child(11) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="4"] .ticker:nth-child(17) .tic.t1, [data-digit="4"] .ticker:nth-child(17) .tic.t2, [data-digit="4"] .ticker:nth-child(18) .tic.t1, [data-digit="4"] .ticker:nth-child(18) .tic.t2, [data-digit="4"] .ticker:nth-child(21) .tic.t1, [data-digit="4"] .ticker:nth-child(21) .tic.t2, [data-digit="4"] .ticker:nth-child(22) .tic.t1, [data-digit="4"] .ticker:nth-child(22) .tic.t2 {
+  transform: rotate(135deg); }
+
+[data-digit="4"] .ticker:nth-child(1) .tic.t1, [data-digit="4"] .ticker:nth-child(3) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="4"] .ticker:nth-child(14) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="4"] .ticker:nth-child(2) .tic.t1, [data-digit="4"] .ticker:nth-child(4) .tic.t1, [data-digit="4"] .ticker:nth-child(15) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="4"] .ticker:nth-child(2) .tic.t2, [data-digit="4"] .ticker:nth-child(4) .tic.t2, [data-digit="4"] .ticker:nth-child(15) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="4"] .ticker:nth-child(5) .tic.t1, [data-digit="4"] .ticker:nth-child(6) .tic.t1, [data-digit="4"] .ticker:nth-child(7) .tic.t1, [data-digit="4"] .ticker:nth-child(8) .tic.t1, [data-digit="4"] .ticker:nth-child(9) .tic.t1, [data-digit="4"] .ticker:nth-child(12) .tic.t1, [data-digit="4"] .ticker:nth-child(16) .tic.t1, [data-digit="4"] .ticker:nth-child(19) .tic.t1, [data-digit="4"] .ticker:nth-child(20) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="4"] .ticker:nth-child(5) .tic.t2, [data-digit="4"] .ticker:nth-child(6) .tic.t2, [data-digit="4"] .ticker:nth-child(7) .tic.t2, [data-digit="4"] .ticker:nth-child(8) .tic.t2, [data-digit="4"] .ticker:nth-child(9) .tic.t2, [data-digit="4"] .ticker:nth-child(12) .tic.t2, [data-digit="4"] .ticker:nth-child(16) .tic.t2, [data-digit="4"] .ticker:nth-child(19) .tic.t2, [data-digit="4"] .ticker:nth-child(20) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="4"] .ticker:nth-child(10) .tic.t1, [data-digit="4"] .ticker:nth-child(13) .tic.t1, [data-digit="4"] .ticker:nth-child(23) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="4"] .ticker:nth-child(11) .tic.t1, [data-digit="4"] .ticker:nth-child(24) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="4"] .ticker:nth-child(11) .tic.t2, [data-digit="4"] .ticker:nth-child(24) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="5"] .ticker:nth-child(1) .tic.t1, [data-digit="5"] .ticker:nth-child(6) .tic.t1, [data-digit="5"] .ticker:nth-child(17) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="5"] .ticker:nth-child(2) .tic.t1, [data-digit="5"] .ticker:nth-child(3) .tic.t1, [data-digit="5"] .ticker:nth-child(7) .tic.t1, [data-digit="5"] .ticker:nth-child(11) .tic.t1, [data-digit="5"] .ticker:nth-child(14) .tic.t1, [data-digit="5"] .ticker:nth-child(18) .tic.t1, [data-digit="5"] .ticker:nth-child(22) .tic.t1, [data-digit="5"] .ticker:nth-child(23) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="5"] .ticker:nth-child(4) .tic.t1, [data-digit="5"] .ticker:nth-child(12) .tic.t1, [data-digit="5"] .ticker:nth-child(15) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="5"] .ticker:nth-child(4) .tic.t2, [data-digit="5"] .ticker:nth-child(12) .tic.t2, [data-digit="5"] .ticker:nth-child(15) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="5"] .ticker:nth-child(5) .tic.t1, [data-digit="5"] .ticker:nth-child(9) .tic.t1, [data-digit="5"] .ticker:nth-child(16) .tic.t1, [data-digit="5"] .ticker:nth-child(20) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="5"] .ticker:nth-child(5) .tic.t2, [data-digit="5"] .ticker:nth-child(9) .tic.t2, [data-digit="5"] .ticker:nth-child(16) .tic.t2, [data-digit="5"] .ticker:nth-child(20) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="5"] .ticker:nth-child(10) .tic.t1, [data-digit="5"] .ticker:nth-child(13) .tic.t1, [data-digit="5"] .ticker:nth-child(21) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="5"] .ticker:nth-child(8) .tic.t1, [data-digit="5"] .ticker:nth-child(24) .tic.t1, [data-digit="5"] .ticker:nth-child(19) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="5"] .ticker:nth-child(8) .tic.t2, [data-digit="5"] .ticker:nth-child(24) .tic.t2, [data-digit="5"] .ticker:nth-child(19) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="6"] .ticker:nth-child(1) .tic.t1, [data-digit="6"] .ticker:nth-child(6) .tic.t1, [data-digit="6"] .ticker:nth-child(14) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="6"] .ticker:nth-child(2) .tic.t1, [data-digit="6"] .ticker:nth-child(3) .tic.t1, [data-digit="6"] .ticker:nth-child(22) .tic.t1, [data-digit="6"] .ticker:nth-child(23) .tic.t1, [data-digit="6"] .ticker:nth-child(7) .tic.t1, [data-digit="6"] .ticker:nth-child(11) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="6"] .ticker:nth-child(4) .tic.t1, [data-digit="6"] .ticker:nth-child(15) .tic.t1, [data-digit="6"] .ticker:nth-child(12) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="6"] .ticker:nth-child(4) .tic.t2, [data-digit="6"] .ticker:nth-child(15) .tic.t2, [data-digit="6"] .ticker:nth-child(12) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="6"] .ticker:nth-child(5) .tic.t1, [data-digit="6"] .ticker:nth-child(9) .tic.t1, [data-digit="6"] .ticker:nth-child(13) .tic.t1, [data-digit="6"] .ticker:nth-child(16) .tic.t1, [data-digit="6"] .ticker:nth-child(17) .tic.t1, [data-digit="6"] .ticker:nth-child(20) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="6"] .ticker:nth-child(5) .tic.t2, [data-digit="6"] .ticker:nth-child(9) .tic.t2, [data-digit="6"] .ticker:nth-child(13) .tic.t2, [data-digit="6"] .ticker:nth-child(16) .tic.t2, [data-digit="6"] .ticker:nth-child(17) .tic.t2, [data-digit="6"] .ticker:nth-child(20) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="6"] .ticker:nth-child(21) .tic.t1, [data-digit="6"] .ticker:nth-child(18) .tic.t1, [data-digit="6"] .ticker:nth-child(10) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="6"] .ticker:nth-child(24) .tic.t1, [data-digit="6"] .ticker:nth-child(8) .tic.t1, [data-digit="6"] .ticker:nth-child(19) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="6"] .ticker:nth-child(24) .tic.t2, [data-digit="6"] .ticker:nth-child(8) .tic.t2, [data-digit="6"] .ticker:nth-child(19) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="7"] .ticker:nth-child(9) .tic.t1, [data-digit="7"] .ticker:nth-child(9) .tic.t2, [data-digit="7"] .ticker:nth-child(10) .tic.t1, [data-digit="7"] .ticker:nth-child(10) .tic.t2, [data-digit="7"] .ticker:nth-child(13) .tic.t1, [data-digit="7"] .ticker:nth-child(13) .tic.t2, [data-digit="7"] .ticker:nth-child(14) .tic.t1, [data-digit="7"] .ticker:nth-child(14) .tic.t2, [data-digit="7"] .ticker:nth-child(17) .tic.t1, [data-digit="7"] .ticker:nth-child(17) .tic.t2, [data-digit="7"] .ticker:nth-child(18) .tic.t1, [data-digit="7"] .ticker:nth-child(18) .tic.t2, [data-digit="7"] .ticker:nth-child(21) .tic.t1, [data-digit="7"] .ticker:nth-child(21) .tic.t2, [data-digit="7"] .ticker:nth-child(22) .tic.t1, [data-digit="7"] .ticker:nth-child(22) .tic.t2 {
+  transform: rotate(135deg); }
+
+[data-digit="7"] .ticker:nth-child(1) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="7"] .ticker:nth-child(2) .tic.t1, [data-digit="7"] .ticker:nth-child(3) .tic.t1, [data-digit="7"] .ticker:nth-child(6) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="7"] .ticker:nth-child(4) .tic.t1, [data-digit="7"] .ticker:nth-child(7) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="7"] .ticker:nth-child(4) .tic.t2, [data-digit="7"] .ticker:nth-child(7) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="7"] .ticker:nth-child(8) .tic.t1, [data-digit="7"] .ticker:nth-child(12) .tic.t1, [data-digit="7"] .ticker:nth-child(16) .tic.t1, [data-digit="7"] .ticker:nth-child(19) .tic.t1, [data-digit="7"] .ticker:nth-child(20) .tic.t1, [data-digit="7"] .ticker:nth-child(11) .tic.t1, [data-digit="7"] .ticker:nth-child(15) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="7"] .ticker:nth-child(8) .tic.t2, [data-digit="7"] .ticker:nth-child(12) .tic.t2, [data-digit="7"] .ticker:nth-child(16) .tic.t2, [data-digit="7"] .ticker:nth-child(19) .tic.t2, [data-digit="7"] .ticker:nth-child(20) .tic.t2, [data-digit="7"] .ticker:nth-child(11) .tic.t2, [data-digit="7"] .ticker:nth-child(15) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="7"] .ticker:nth-child(5) .tic.t1, [data-digit="7"] .ticker:nth-child(23) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="7"] .ticker:nth-child(24) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="7"] .ticker:nth-child(24) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="8"] .ticker:nth-child(1) .tic.t1, [data-digit="8"] .ticker:nth-child(6) .tic.t1, [data-digit="8"] .ticker:nth-child(14) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="8"] .ticker:nth-child(2) .tic.t1, [data-digit="8"] .ticker:nth-child(3) .tic.t1, [data-digit="8"] .ticker:nth-child(22) .tic.t1, [data-digit="8"] .ticker:nth-child(23) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="8"] .ticker:nth-child(4) .tic.t1, [data-digit="8"] .ticker:nth-child(7) .tic.t1, [data-digit="8"] .ticker:nth-child(15) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="8"] .ticker:nth-child(4) .tic.t2, [data-digit="8"] .ticker:nth-child(7) .tic.t2, [data-digit="8"] .ticker:nth-child(15) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="8"] .ticker:nth-child(5) .tic.t1, [data-digit="8"] .ticker:nth-child(8) .tic.t1, [data-digit="8"] .ticker:nth-child(9) .tic.t1, [data-digit="8"] .ticker:nth-child(12) .tic.t1, [data-digit="8"] .ticker:nth-child(13) .tic.t1, [data-digit="8"] .ticker:nth-child(16) .tic.t1, [data-digit="8"] .ticker:nth-child(17) .tic.t1, [data-digit="8"] .ticker:nth-child(20) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="8"] .ticker:nth-child(5) .tic.t2, [data-digit="8"] .ticker:nth-child(8) .tic.t2, [data-digit="8"] .ticker:nth-child(9) .tic.t2, [data-digit="8"] .ticker:nth-child(12) .tic.t2, [data-digit="8"] .ticker:nth-child(13) .tic.t2, [data-digit="8"] .ticker:nth-child(16) .tic.t2, [data-digit="8"] .ticker:nth-child(17) .tic.t2, [data-digit="8"] .ticker:nth-child(20) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="8"] .ticker:nth-child(21) .tic.t1, [data-digit="8"] .ticker:nth-child(10) .tic.t1, [data-digit="8"] .ticker:nth-child(18) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="8"] .ticker:nth-child(24) .tic.t1, [data-digit="8"] .ticker:nth-child(19) .tic.t1, [data-digit="8"] .ticker:nth-child(11) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="8"] .ticker:nth-child(24) .tic.t2, [data-digit="8"] .ticker:nth-child(19) .tic.t2, [data-digit="8"] .ticker:nth-child(11) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="9"] .ticker:nth-child(1) .tic.t1, [data-digit="9"] .ticker:nth-child(6) .tic.t1, [data-digit="9"] .ticker:nth-child(17) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="9"] .ticker:nth-child(2) .tic.t1, [data-digit="9"] .ticker:nth-child(3) .tic.t1, [data-digit="9"] .ticker:nth-child(14) .tic.t1, [data-digit="9"] .ticker:nth-child(18) .tic.t1, [data-digit="9"] .ticker:nth-child(22) .tic.t1, [data-digit="9"] .ticker:nth-child(23) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="9"] .ticker:nth-child(4) .tic.t1, [data-digit="9"] .ticker:nth-child(7) .tic.t1, [data-digit="9"] .ticker:nth-child(15) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="9"] .ticker:nth-child(4) .tic.t2, [data-digit="9"] .ticker:nth-child(7) .tic.t2, [data-digit="9"] .ticker:nth-child(15) .tic.t2 {
+  transform: rotate(90deg); }
+
+[data-digit="9"] .ticker:nth-child(5) .tic.t1, [data-digit="9"] .ticker:nth-child(8) .tic.t1, [data-digit="9"] .ticker:nth-child(9) .tic.t1, [data-digit="9"] .ticker:nth-child(12) .tic.t1, [data-digit="9"] .ticker:nth-child(16) .tic.t1, [data-digit="9"] .ticker:nth-child(20) .tic.t1 {
+  transform: rotate(90deg); }
+
+[data-digit="9"] .ticker:nth-child(5) .tic.t2, [data-digit="9"] .ticker:nth-child(8) .tic.t2, [data-digit="9"] .ticker:nth-child(9) .tic.t2, [data-digit="9"] .ticker:nth-child(12) .tic.t2, [data-digit="9"] .ticker:nth-child(16) .tic.t2, [data-digit="9"] .ticker:nth-child(20) .tic.t2 {
+  transform: rotate(-90deg); }
+
+[data-digit="9"] .ticker:nth-child(10) .tic.t1, [data-digit="9"] .ticker:nth-child(13) .tic.t1, [data-digit="9"] .ticker:nth-child(21) .tic.t1 {
+  transform: rotate(-90deg); }
+
+[data-digit="9"] .ticker:nth-child(11) .tic.t1, [data-digit="9"] .ticker:nth-child(24) .tic.t1, [data-digit="9"] .ticker:nth-child(19) .tic.t1 {
+  transform: rotate(180deg); }
+
+[data-digit="9"] .ticker:nth-child(11) .tic.t2, [data-digit="9"] .ticker:nth-child(24) .tic.t2, [data-digit="9"] .ticker:nth-child(19) .tic.t2 {
+  transform: rotate(-90deg); }
