@@ -1,0 +1,60 @@
+.container {
+  width: 100%; }
+
+.clock {
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(2.5);
+  width: 24rem; }
+  .clock .separator {
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    position: relative; }
+    .clock .separator::before, .clock .separator::after {
+      position: absolute;
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: black;
+      animation: blink 1s infinite steps(2); }
+    .clock .separator::after {
+      top: 33%; }
+    .clock .separator::before {
+      top: 66%; }
+
+@keyframes blink {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.digit {
+  width: 3rem;
+  float: left; }
+  .digit .ticker {
+    float: left;
+    width: 1rem;
+    height: 1rem;
+    border: 0.07142857142rem solid #eaeaea;
+    border-radius: 50%;
+    position: relative; }
+    .digit .ticker .tic {
+      transition: transform 500ms linear;
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+      .digit .ticker .tic::before {
+        position: absolute;
+        background: #aaa;
+        content: " ";
+        left: 50%;
+        top: 50%;
+        width: 50%;
+        height: 0.1rem;
+        transform: translateY(-50%); }

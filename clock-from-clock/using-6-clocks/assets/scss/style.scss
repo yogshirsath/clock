@@ -1,0 +1,73 @@
+$clock-width: 1rem;
+.container {
+  width: 100%;
+}
+.clock {
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(2.5);
+  width: $clock-width * 24;
+  .separator {
+    float: left;
+    width: $clock-width * 3;
+    height: $clock-width * 3;
+    position: relative;
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      width: $clock-width;
+      height: $clock-width;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: black;
+      animation: blink 1s infinite steps(2);
+    }
+    &::after {
+      top: 33%;
+    }
+    &::before {
+      top: 66%;
+    }
+  }
+}
+
+@keyframes blink{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.digit {
+  width: $clock-width * 3;
+  float: left;
+  .ticker {
+    float: left;
+    width: $clock-width;
+    height: $clock-width;
+    border: 0.07142857142rem solid #eaeaea;
+    border-radius: 50%;
+    position: relative;
+    .tic {
+      transition: transform 500ms linear;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      &::before {
+        position: absolute;
+        background: #aaa;
+        content: " ";
+        left: 50%;
+        top: 50%;
+        width: 50%;
+        height: 0.1rem;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
