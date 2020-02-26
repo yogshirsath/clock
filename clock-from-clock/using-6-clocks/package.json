@@ -1,0 +1,21 @@
+{
+    "name": "edwiserremui",
+    "version": "1.0.0",
+    "description": "Edwiser RemUI Theme.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/core": "^7.5.5",
+        "gulp-babel": "^8.0.0"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-minify": "^3.1.0",
+        "gulp-sass": "^4.0.2"
+    }
+}

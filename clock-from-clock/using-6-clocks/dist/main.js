@@ -283,10 +283,10 @@ function applyNumber(element, digit) {
         if (rotation.index.length != 0) {
             rotation.index.forEach(function(miniclock) {
                 miniclock = $(element).find('.ticker:nth-child(' + miniclock + ')');
-                miniclock.find('.tic.t1').css('transform', 'rotate(' + rotation.deg[0] + 'deg)');
-                miniclock.find('.tic.t2').css('transform', 'rotate(' + rotation.deg[1] + 'deg)');
+                miniclock.find('.tic.t1').css('transform', 'rotate(' + rotation.deg[0] + 'deg)').css('opacity', rotation.deg[0] != 135 ? 1 : 0);
+                miniclock.find('.tic.t2').css('transform', 'rotate(' + rotation.deg[1] + 'deg)').css('opacity', rotation.deg[1] != 135 ? 1 : 0);
                 if (rotation.deg.length == 3 && miniclock.find('.tic.t3')) {
-                    miniclock.find('.tic.t3').css('transform', 'rotate(' + rotation.deg[2] + 'deg)');
+                    miniclock.find('.tic.t3').css('transform', 'rotate(' + rotation.deg[2] + 'deg)').css('opacity', rotation.deg[2] != 135 ? 1 : 0);
                 }
             });
         }
